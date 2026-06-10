@@ -4,10 +4,10 @@
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-        <!-- Google tag (gtag.js) — GA4 -->
+        <!-- Google tag (gtag.js) — GA4. Replace G-XXXXXXXXXX with your Measurement ID -->
         <script
             async
-            src="https://www.googletagmanager.com/gtag/js?id=G-8SDCCMNHDT"
+            src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"
         ></script>
         <script>
             window.dataLayer = window.dataLayer || [];
@@ -33,7 +33,7 @@
                 }
             } catch (e) {}
             gtag("js", new Date());
-            gtag("config", "G-8SDCCMNHDT");
+            gtag("config", "G-XXXXXXXXXX");
         </script>
 
         <title>Panta — Marketplace for modern minds</title>
@@ -49,12 +49,7 @@
         />
         <link rel="stylesheet" href="styles.css" />
         <link rel="icon" href="favicon.ico" sizes="any" />
-        <link
-            rel="icon"
-            type="image/png"
-            sizes="32x32"
-            href="favicon-32.png"
-        />
+        <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png" />
         <link
             rel="apple-touch-icon"
             sizes="180x180"
@@ -88,6 +83,23 @@
                 </nav>
             </div>
         </header>
+        <!-- ======================= STRIP ======================= -->
+        <div class="strip" aria-hidden="true">
+            <div class="strip__row" id="strip">
+                <span><b>All</b> independent creators</span>
+                <span>·</span>
+                <span><b>e-books</b></span>
+                <span>·</span>
+                <span><b>audiobooks</b></span>
+                <span>·</span>
+                <span><b>courses</b></span>
+                <span>·</span>
+                <span><b>interactive experiences</b></span>
+                <span>·</span>
+                <span>fair royalties for authors</span>
+                <span>·</span>
+            </div>
+        </div>
 
         <main id="top">
             <!-- ======================= HERO ======================= -->
@@ -105,8 +117,11 @@
                         <p class="hero__lede reveal" data-d="2">
                             Empowering creators, inspiring buyers. We bridge the
                             gap between brilliant authors and eager minds —
-                            offering a curated space to trade e-books,
-                            audiobooks, courses, and interactive experiences.
+                            offering a curated space to trade
+                            <em
+                                >e-books, audiobooks, courses, and interactive
+                                experiences</em
+                            >.
                         </p>
                         <div class="hero__cta reveal" data-d="3">
                             <a class="btn btn--primary" href="#waitlist"
@@ -139,24 +154,6 @@
                     </div>
                 </div>
             </section>
-
-            <!-- ======================= STRIP ======================= -->
-            <div class="strip" aria-hidden="true">
-                <div class="strip__row" id="strip">
-                    <span><b>All</b> independent creators</span>
-                    <span>·</span>
-                    <span><b>e-books</b></span>
-                    <span>·</span>
-                    <span><b>audiobooks</b></span>
-                    <span>·</span>
-                    <span><b>courses</b></span>
-                    <span>·</span>
-                    <span><b>interactive experiences</b></span>
-                    <span>·</span>
-                    <span>fair royalties for authors</span>
-                    <span>·</span>
-                </div>
-            </div>
 
             <!-- ======================= CATEGORIES ======================= -->
             <!-- --
@@ -472,6 +469,6 @@
 
         <!-- behaviour -->
         <script src="app.js"></script>
-
     </body>
 </html>
+
