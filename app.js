@@ -11,6 +11,30 @@
   window.addEventListener('scroll', onScroll, { passive: true });
   onScroll();
 
+  /* ---- mobile menu toggle ---- */
+  var menuBtn = document.getElementById('navMenuBtn');
+  var menu = document.getElementById('navMenu');
+  if (menuBtn && menu && nav) {
+    var closeMenu = function () {
+      nav.classList.remove('nav--menu-open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+      menuBtn.setAttribute('aria-label', 'Open menu');
+    };
+    menuBtn.addEventListener('click', function () {
+      var open = nav.classList.toggle('nav--menu-open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    });
+    /* close when a menu link is tapped */
+    menu.addEventListener('click', function (ev) {
+      if (ev.target.closest('a')) closeMenu();
+    });
+    /* close on Escape */
+    document.addEventListener('keydown', function (ev) {
+      if (ev.key === 'Escape') closeMenu();
+    });
+  }
+
   /* ---- duplicate marquee content for seamless loop ---- */
   var strip = document.getElementById('strip');
   if (strip) strip.innerHTML += strip.innerHTML;
